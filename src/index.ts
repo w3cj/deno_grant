@@ -1,11 +1,11 @@
 import { GetTokenOptions, OAuth2Client } from "oauth2_client";
 
-import OAuthConfigs from "@DenoGrant/config/OAuthConfigs.ts";
-import ProfileConfigs from "@DenoGrant/config/ProfileConfigs.ts";
+import OAuthConfigs from "./config/OAuthConfigs.ts";
+import ProfileConfigs from "./config/ProfileConfigs.ts";
 
-import DenoGrantConfig from "@DenoGrant/interfaces/DenoGrantConfig.ts";
-import Providers from "@DenoGrant/interfaces/Providers.ts";
-import StrategyConfig from "@DenoGrant/interfaces/StrategyConfig.ts";
+import DenoGrantConfig from "./interfaces/DenoGrantConfig.ts";
+import Providers from "./interfaces/Providers.ts";
+import StrategyConfig from "./interfaces/StrategyConfig.ts";
 import {
   ProfileRequestOverrides,
   ProfileResponseTransforms,

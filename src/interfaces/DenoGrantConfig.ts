@@ -1,4 +1,4 @@
-import StrategyConfig from "@DenoGrant/interfaces/StrategyConfig.ts";
+import StrategyConfig from "./StrategyConfig.ts";
 
 export default interface DenoGrantConfig {
   /**
