@@ -20,7 +20,10 @@ Minimalistic pre-configured OAuth 2.0 client for Deno. Inspired by
 ## Usage
 
 ```ts
-import DenoGrant, { OAuth2Client, Providers } from "deno_grant";
+import DenoGrant, {
+  OAuth2Client,
+  Providers,
+} from "https://deno.land/x/deno_grant@v0.1.0/mod.ts";
 
 // Create a DenoGrant instance with your app's base uri and any number of strategies:
 const denoGrant = new DenoGrant({
@@ -66,6 +69,9 @@ const tokens = await denoGrant.getToken(
 );
 
 // Request user profile with obtained access token
-const profile = await denoGrant.getProfile(Providers.github, tokens.accessToken);
+const profile = await denoGrant.getProfile(
+  Providers.github,
+  tokens.accessToken,
+);
 // Profile is fully typed based on provider type!
 ```
