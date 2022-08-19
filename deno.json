@@ -1,6 +1,5 @@
 {
   "tasks": {
     "flint": "deno fmt && deno lint"
-  },
-  "importMap": "./import_map.json"
+  }
 }
