@@ -1,4 +1,4 @@
-import { GetTokenOptions, OAuth2Client } from "https://deno.land/x/oauth2_client@v0.2.1/mod.ts";
+import { type GetTokenOptions, OAuth2Client } from "../deps.ts";
 import { ProfileRequestOptions } from "./index.ts";
 import GithubProfile from "./interfaces/profiles/GithubProfile.ts";
 import OAuthProfile from "./interfaces/profiles/OAuthProfile.ts";
