@@ -1,9 +1,13 @@
-import { GetTokenOptions, OAuth2Client } from "https://deno.land/x/oauth2_client@v0.2.1/mod.ts";
+import {
+  GetTokenOptions,
+  OAuth2Client,
+} from "https://deno.land/x/oauth2_client@v0.2.1/mod.ts";
 import { ProfileRequestOptions } from "./index.ts";
 import GithubProfile from "./interfaces/profiles/GithubProfile.ts";
 import OAuthProfile from "./interfaces/profiles/OAuthProfile.ts";
 import { TwitchProfileResponse } from "./interfaces/profiles/TwitchProfile.ts";
 import Providers from "./interfaces/Providers.ts";
+import { FitbitProfileResponse } from "./interfaces/profiles/FitbitProfile.ts";
 
 export const TokenRequestOverrides = new Map<
   Providers,
@@ -55,5 +59,14 @@ ProfileResponseTransforms.set(
   (profileResponse: GithubProfile) => {
     profileResponse.id = profileResponse.id.toString();
     return profileResponse;
+  },
+);
+
+// Fitbit profile request responds with a "user" wrapper, we unwrap it here
+ProfileResponseTransforms.set(
+  Providers.fitbit,
+  (profileResponse: FitbitProfileResponse) => {
+    profileResponse.user.id = profileResponse.user.encodedId;
+    return profileResponse.user;
   },
 );

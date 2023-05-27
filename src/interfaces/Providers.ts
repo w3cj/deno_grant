@@ -58,7 +58,7 @@ enum Providers {
   // familysearch = "familysearch",
   // feedly = "feedly",
   // figma = "figma",
-  // fitbit = "fitbit",
+  fitbit = "fitbit",
   // flattr = "flattr",
   // flowdock = "flowdock",
   // formstack = "formstack",
